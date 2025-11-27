@@ -2,7 +2,7 @@
 
 SQL Copilot is an intelligent natural language to SQL interface powered by LangGraph and LLM, featuring **knowledge base management** and **self-evolution capabilities**. The system not only allows users to query databases using natural language but also continuously learns from historical interactions to optimize knowledge base structure and query performance.
 
-[![video](https://github.com/user-attachments/assets/cd53d1c1-3616-4fd6-8822-06143cb0dc12)](https://github.com/user-attachments/assets/cd53d1c1-3616-4fd6-8822-06143cb0dc12)
+[![video](https://github.com/user-attachments/assets/2ae11d07-c6be-46b6-bde7-3308c838bd15)](https://github.com/user-attachments/assets/2ae11d07-c6be-46b6-bde7-3308c838bd15)
 ## ✨ Core Features
 
 ### 🧠 Knowledge Base Management
