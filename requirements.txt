@@ -1,0 +1,8 @@
+Flask
+langgraph
+langchain
+langchain-openai
+openai
+sqlalchemy
+pandas
+pymilvus

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "system",
+    "name": "System Database",
+    "type": "sqlite",
+    "host": "localhost",
+    "port": 0,
+    "username": "",
+    "password": "",
+    "database": "data/system.db"
+  },
+  {
+    "id": "chenjie",
+    "name": "示例数据库",
+    "type": "mysql",
+    "host": "127.0.0.1",
+    "port": 9030,
+    "username": "root",
+    "password": "1",
+    "database": "chenjie"
+  }
+]

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Copilot - 智能SQL助手</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.2/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-robot"></i>
+                    <h1>SQL Copilot</h1>
+                </div>
+                <div class="header-actions">
+                    <button id="clearChat" class="btn btn-secondary">
+                        <i class="fas fa-trash"></i>
+                        清空对话
+                    </button>
+                    <button id="initDb" class="btn btn-primary">
+                        <i class="fas fa-database"></i>
+                        初始化数据库
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Chat Container -->
+            <div class="chat-container">
+                <div id="chatMessages" class="chat-messages">
+                    <!-- Welcome Message -->
+                    <div class="message bot-message">
+                        <div class="message-avatar">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="message-content">
+                            <div class="message-text">
+                                <p>👋 欢迎使用 SQL Copilot！</p>
+                                <p>我是一个智能SQL助手，可以将您的自然语言问题转换为SQL查询并返回结果。</p>
+                                <p>请尝试询问关于数据库的问题，例如：</p>
+                                <ul>
+                                    <li>"查询所有用户的订单信息"</li>
+                                    <li>"分析每个产品的销售情况"</li>
+                                    <li>"找出销售额最高的品牌"</li>
+                                </ul>
+                            </div>
+                            <div class="message-time" id="welcomeTime"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Input Area -->
+                <div class="input-container">
+                    <div class="input-wrapper">
+                        <textarea 
+                            id="messageInput" 
+                            placeholder="请输入您的问题...（例如：查询各品牌收入排名）" 
+                            rows="1"
+                        ></textarea>
+                        <button id="sendMessage" class="send-btn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <div class="input-hint">
+                        <i class="fas fa-lightbulb"></i>
+                        按 Enter 发送，Shift + Enter 换行
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="loading-spinner">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>正在处理您的查询...</p>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

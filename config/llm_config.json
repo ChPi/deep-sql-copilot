@@ -1,0 +1,35 @@
+{
+  "llm_configs": {
+    "default": {
+      "provider": "openai",
+      "config": {
+        "api_key": "1",
+        "base_url": "http://127.0.0.1:1234/v1",
+        "model": "chat",
+        "temperature": 0.7,
+        "max_tokens": 20480,
+        "timeout": 30
+      }
+    },
+    "coder": {
+      "provider": "openai",
+      "config": {
+        "api_key": "1",
+        "base_url": "http://127.0.0.1:1234/v1",
+        "model": "coder",
+        "temperature": 0.7,
+        "max_tokens": 20480,
+        "timeout": 30
+      }
+    }
+  },
+  "embedding_configs": {
+    "embedding": {
+      "api_key": "1",
+      "base_url": "http://127.0.0.1:1234/v1",
+      "model": "embedding",
+      "dimensions": 1024,
+      "timeout": 30
+    }
+  }
+}
